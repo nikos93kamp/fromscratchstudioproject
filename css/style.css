@@ -102,17 +102,23 @@ body {
     border-bottom: 2px solid #D8D8D8;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 575px) {
   .underline { max-width: 100%; }
 }
 
-@media (min-width: 551px) {
+
+@media (min-width: 576px) {
   .underline { max-width: 82.5%; }
 }
 
 #message {
     margin-bottom: 0;
 }
+
+@media (min-width: 576px) and (max-width: 768px) {
+  #postalcode { padding: 0; }
+}
+
 
 #optional {
     font-weight: 500;
@@ -122,13 +128,10 @@ body {
     line-height: 17px;
 }
 
-@media (max-width: 767px) {
-  #optional { text-align: left; }
-}
-
-@media (min-width: 768px) {
+@media (min-width: 576px)  {
   #optional { text-align: right; }
 }
+
 
 .form-group.form-check {
     padding-left: 0;
@@ -206,20 +209,15 @@ body {
     border-radius: 0.25rem;
 }
 
-@media (max-width: 318px) {
-  #map_image { max-width: 100% }
+@media (max-width: 576px) {
+  #map_image { display: block;
+  margin-left: auto;
+  margin-right: auto; width: 100% }
 }
 
-@media (min-width: 319px) and (max-width: 539px) {
-  #map_image { max-width: 100% }
-}
 
-@media (min-width: 540px) and (max-width: 767px) {
-  #map_image { max-width: 100%; margin: 0; margin-right: 15px; }
-}
-
-@media (min-width: 768px) and (max-width: 1439px) {
-  #map_image { max-width: 100%; }
+@media (min-width: 577px) {
+  #map_image { width: 100%; }
 }
 
 .headquarters h3 {
@@ -240,54 +238,43 @@ body {
 
 
 /* Footer Section */
+
 #footer {
   background-color: #000;
 }
 
-#footer .logo_1 {
-    margin-top: 20px;
-}
-
-@media (max-width: 281px) {
-  #footer .logo_1 { margin-left: 50px; }
-}
-
-@media (min-width: 282px) and (max-width: 320px) {
-  #footer .logo_1 { margin-left: 70px; }
-}
-
-@media (min-width: 321px) and (max-width: 376px) {
-  #footer .logo_1 { margin-left: 90px; }
-}
-
-@media (min-width: 377px) and (max-width: 415px) {
-  #footer .logo_1 { margin-left: 110px; }
-}
-
-@media (min-width: 416px) and (max-width: 576px) {
-  #footer .logo_1 { margin-left: 150px; }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  #footer .logo_1 { margin-left: 0px; }
-}
-
-
 .footer-links {
-    margin: 0;
-    margin-top: 20px;
-}
-
-@media (min-width: 769px) and (max-width: 1023px) {
-  .footer-links { margin-left: 15px; }
-}
-
-@media (min-width: 1024px) {
-  .footer-links { margin-left: 50px; }
+    margin: 5px 0;
 }
 
 
-.footer-links a {
+@media (max-width: 316px) {
+  .footer-links a.blog { position: sticky; padding-right: 20px; }
+}
+
+
+@media (max-width: 576px) {
+  .logo_1 { display: block;
+  margin-left: auto;
+  margin-right: auto; }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .logo_1 { position: sticky; padding-left: 175px; }
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .logo_1 { position: sticky; padding-left: 265px; }
+}
+
+@media (min-width: 992px) {
+  .logo_1 { position: sticky; padding-left: 0px; }
+}
+
+
+.footer-links li a {
     color: #fff;
     font-weight: 700;
     font-size: 14px;
@@ -296,51 +283,36 @@ body {
     text-align: left;
 }
 
-@media (max-width: 281px) {
-  .footer-links a { margin-left: -1px; margin-right: -25px; }
+.social-icons {
+  margin: -15px 0px;
 }
-
-@media (min-width: 282px) and (max-width: 320px) {
-  .footer-links a { margin-left: 0; margin-right: -10px; }
-}
-
-@media (min-width: 416px) and (max-width: 576px) {
-  .footer-links a { margin-left: 5px; margin-right: 0px; }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .footer-links a { margin: 0; }
-}
-
 
 .social-icons a {
-    margin: 0;
-    margin-left: -20px;
-    margin-right: -20px;
+  margin: 0px -15px;
 }
 
-@media (max-width: 281px) {
-  .social-icons { margin-right: 50px; }
+@media (max-width: 576px) {
+  .social-icons { display: flex;
+  justify-content: center;
+  align-items: center; }
 }
 
-@media (min-width: 282px) and (max-width: 320px) {
-  .social-icons { margin-right: 70px; }
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .social-icons { position: sticky; padding-left: 160px; }
 }
 
-@media (min-width: 321px) and (max-width: 376px) {
-  .social-icons { margin-right: 90px; }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .social-icons { position: sticky; padding-left: 250px;}
 }
 
-@media (min-width: 377px) and (max-width: 415px) {
-  .social-icons { margin-right: 110px; }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .social-icons { position: sticky; padding-left: 45px;}
 }
 
-@media (min-width: 416px) and (max-width: 576px) {
-  .social-icons { margin-right: 150px; }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .social-icons { margin-right: 0px; }
+@media (min-width: 1200px) {
+  .social-icons { position: sticky; padding-left: 90px;}
 }
 
 .copyright-text {
@@ -351,5 +323,3 @@ body {
     line-height: 22.5px;
     text-align: center;
 }
-
-

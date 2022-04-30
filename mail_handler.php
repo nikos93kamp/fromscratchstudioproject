@@ -1,4 +1,6 @@
 <?php
+
+
 if(isset($_POST['submit'])){
     $to = "nkampouridis9@gmail.com"; // this is my Email address
     $from = $_POST['inputEmail']; // this is the sender's Email address
@@ -11,7 +13,7 @@ if(isset($_POST['submit'])){
     $message = $full_name . " wrote the following:" . "\n\n" . $_POST['inputMessage'];
     $message2 = "Here is a copy of your message " . $full_name . "\n\n" . $_POST['inputMessage'];
 
-    $headers = "From:" . $from;
+    $headers = "From:" . $from . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=utf-8';
     $headers2 = "From:" . $to;
     mail($to,$subject,$message,$headers);
     mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender

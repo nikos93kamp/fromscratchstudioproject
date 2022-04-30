@@ -1,0 +1,42 @@
+Pre-Steps
+
+Install xampp and start the apache server
+Go to htdocs folder of your xampp folder and put your project there
+
+Step 1
+======
+
+in C:\xampp\php\php.ini
+
+uncomment --> extension=php_openssl.dll
+
+Step 2
+======
+
+Add the following code:
+
+[mail function]
+SMTP=smtp.gmail.com
+smtp_port=465
+sendmail_from='my gmail'
+
+Step 3
+======
+
+Go to the following file and replace its contents with the code under [sendmail]
+
+c:\xampp\sendmail\sendmail.ini
+
+[sendmail]
+smtp_server=smtp.gmail.com
+smtp_port=465
+error_logfile=error.log
+debug_logfile=debug.log
+auth_username='my gmail'
+auth_password='my password'
+force_sender='my gmail'
+
+Step 4
+======
+
+Allow Gmail access for less secure apps
